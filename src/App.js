@@ -31,14 +31,14 @@ const App = () => {
                                 Hello everyone this is a sample text and i am trying to keep it as long as possible so please bear with me and type as much as you can.
                             </Typography>
                             <div className={classes.buttons}> 
-                                <Grid container spacing={1} justify='center'>
+                                <Grid container spacing={1}>
                                     <Grid item>
-                                        <Button variant='contained' color='primary'>
+                                        <Button align='center' variant='contained' color='primary'>
                                             See my photos
                                         </Button>
                                     </Grid>
                                     <Grid item>
-                                        <Button variant='outlined' color='primary'>
+                                        <Button align='center' variant='outlined' color='primary'>
                                             Secondary action
                                         </Button>
                                     </Grid>
@@ -74,6 +74,14 @@ const App = () => {
                             </Grid>
                     </Container>
                 </main>
+                <footer justify='center' className={classes.footer}>
+                    <Typography variant='h6' align='center'>
+                        Footer
+                    </Typography>
+                    <Typography variant='subtitle1' align='center'>
+                        This is footer
+                    </Typography>
+                </footer>
         </>
     )
 }
