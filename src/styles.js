@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttons: {
         marginTop: '40px',
+        justifyContent: "center"
     },
     cardGrid: {
         padding: '20px 0'

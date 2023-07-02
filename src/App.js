@@ -3,6 +3,7 @@ import '@fontsource/roboto/700.css';
 import { Typography, AppBar, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container, Button } from '@mui/material';
 import { PhotoCamera } from '@mui/icons-material';
 import useStyles from './styles';
+import Stack from '@mui/material/Stack';
 
 const cards = [1,2,3,4,5,6,7,8,9];
 
@@ -30,20 +31,15 @@ const App = () => {
                             <Typography variant='h6' align='center' color="textSecondary" paragraph>
                                 Hello everyone this is a sample text and i am trying to keep it as long as possible so please bear with me and type as much as you can.
                             </Typography>
-                            <div className={classes.buttons}> 
-                                <Grid container spacing={1}>
-                                    <Grid item>
-                                        <Button align='center' variant='contained' color='primary'>
-                                            See my photos
-                                        </Button>
-                                    </Grid>
-                                    <Grid item>
-                                        <Button align='center' variant='outlined' color='primary'>
-                                            Secondary action
-                                        </Button>
-                                    </Grid>
-                                </Grid>
-                            </div>
+                            <Stack
+                                sx={{ pt: 4 }}
+                                direction="row"
+                                spacing={2}
+                                justifyContent="center"
+                                >
+                                <Button variant="contained">See my photos</Button>
+                                <Button variant="outlined">Secondary action</Button>
+                            </Stack>
                         </Container>
                     </div>
                     <Container className={classes.cardGrid} maxWidth='md'>
@@ -63,11 +59,11 @@ const App = () => {
                                                 <Typography>
                                                     This is media card. Enter all your content here.
                                                 </Typography>
+                                            </CardContent>
                                                 <CardActions>
                                                     <Button size='small' color='primary'>View</Button>
                                                     <Button size='small' color='primary'>Edit</Button>
                                                 </CardActions>
-                                            </CardContent>
                                         </Card>
                                     </Grid>
                                 ))}
